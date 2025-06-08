@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitron Conversor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <h1>CONVERTA</h1>
+
+      <form id="iconverter" class="converter">
+        <div class="currency-box">
+          <div class="cash-input">
+            <label for="icash">Valor</label>
+            <input
+              type="number"
+              name="cash"
+              id="icash"
+              placeholder="Digite um valor"
+              step="0.1"
+              min="0"
+              required
+            />
+          </div>
+          <div class="currency-select">
+            <label for="icoin">De</label>
+            <select id="icoin">
+              <option value="USD">USD - Dólar Americano</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="JPY">JPY - Iene Japonês</option>
+              <option value="GBP">GBP - Libra Esterlina</option>
+              <option value="AUD">AUD - Dólar Australiano</option>
+              <option value="CAD">CAD - Dólar Canadense</option>
+              <option value="CHF">CHF - Franco Suíço</option>
+              <option value="CNY">CNY - Yuan Chinês</option>
+              <option value="HKD">HKD - Dólar de Hong Kong</option>
+              <option value="BRL" selected>BRL - Real Brasileiro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="currency-box">
+          <div class="cash-input">
+            <label for="iresult">Resultado</label>
+            <input
+              type="text"
+              readonly
+              name="result"
+              id="iresult"
+              placeholder="Valor final"
+            />
+          </div>
+          <div class="currency-select">
+            <label for="itocoin">De</label>
+            <select id="itocoin">
+              <option value="USD" selected>USD - Dólar Americano</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="JPY">JPY - Iene Japonês</option>
+              <option value="GBP">GBP - Libra Esterlina</option>
+              <option value="AUD">AUD - Dólar Australiano</option>
+              <option value="CAD">CAD - Dólar Canadense</option>
+              <option value="CHF">CHF - Franco Suíço</option>
+              <option value="CNY">CNY - Yuan Chinês</option>
+              <option value="HKD">HKD - Dólar de Hong Kong</option>
+              <option value="BRL">BRL - Real Brasileiro</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-conversor" id="ibtn-conversor">
+          Converter !
+        </button>
+
+        <div class="result-conv"></div>
+        <div class="error"></div>
+
+        <div class="info"><p>Taxas atualizadas em tempo real</p></div>
+      </form>
+    </div>
+  </body>
+</html>
